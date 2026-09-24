@@ -87,9 +87,13 @@ function png(size) {
   ]);
 }
 
-const outDir = path.join(__dirname, "..", "assets");
-fs.mkdirSync(outDir, { recursive: true });
-for (const size of SIZES) {
-  fs.writeFileSync(path.join(outDir, `icon-${size}.png`), png(size));
-  console.log(`assets/icon-${size}.png`);
+module.exports = { png, crc32 };
+
+if (require.main === module) {
+  const outDir = path.join(__dirname, "..", "assets");
+  fs.mkdirSync(outDir, { recursive: true });
+  for (const size of SIZES) {
+    fs.writeFileSync(path.join(outDir, `icon-${size}.png`), png(size));
+    console.log(`assets/icon-${size}.png`);
+  }
 }
