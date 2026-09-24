@@ -1,0 +1,32 @@
+{
+  "functions": [
+    {
+      "id": "TOANSI",
+      "name": "TOANSI",
+      "description": "Converts Unicode Bangla text to Bijoy (ANSI). Show the result with the SutonnyMJ font.",
+      "result": { "type": "any", "dimensionality": "matrix" },
+      "parameters": [
+        {
+          "name": "text",
+          "description": "A cell or range containing Unicode Bangla text",
+          "type": "any",
+          "dimensionality": "matrix"
+        }
+      ]
+    },
+    {
+      "id": "TOUNICODE",
+      "name": "TOUNICODE",
+      "description": "Converts Bijoy (ANSI) text to Unicode Bangla. Text that is already Unicode is returned unchanged.",
+      "result": { "type": "any", "dimensionality": "matrix" },
+      "parameters": [
+        {
+          "name": "text",
+          "description": "A cell or range containing Bijoy (ANSI) text",
+          "type": "any",
+          "dimensionality": "matrix"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "module": "commonjs",
+    "lib": ["ES2020", "DOM"],
+    "strict": true,
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "types": ["office-js", "custom-functions-runtime"]
+  },
+  "include": ["src/**/*", "../src/core.ts", "../src/data.ts"]
+}

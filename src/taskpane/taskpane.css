@@ -1,0 +1,149 @@
+:root {
+  --bg: #ffffff;
+  --text: #1f1f1f;
+  --muted: #616161;
+  --border: #d1d1d1;
+  --accent: #0f6c5a;
+  --accent-hover: #0b5647;
+  --ok: #107c10;
+  --error: #c50f1f;
+  --code-bg: #f3f3f3;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1f1f1f;
+    --text: #f0f0f0;
+    --muted: #adadad;
+    --border: #444444;
+    --accent: #2fa98c;
+    --accent-hover: #3cc2a1;
+    --ok: #54b054;
+    --error: #ff6b78;
+    --code-bg: #2b2b2b;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 14px/1.45 "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+main {
+  padding: 16px;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+h2 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+section {
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+  margin-top: 16px;
+}
+
+p {
+  margin: 0 0 6px;
+}
+
+.hint {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+button.primary {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 9px 12px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button.primary:hover {
+  background: var(--accent-hover);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.status {
+  min-height: 1.45em;
+  font-size: 13px;
+}
+
+.status.ok {
+  color: var(--ok);
+}
+
+.status.error {
+  color: var(--error);
+}
+
+label.check {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+label.check input {
+  margin-top: 3px;
+}
+
+label.field {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+label.field input {
+  display: block;
+  width: 100%;
+  margin-top: 2px;
+  padding: 5px 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+}
+
+code {
+  background: var(--code-bg);
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+footer {
+  margin-top: 20px;
+  color: var(--muted);
+  font-size: 11px;
+}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bangla Converter</title>
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+    <link rel="stylesheet" href="taskpane.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Bangla Converter</h1>
+      <p class="hint">Select cells, then convert them in place. Formula cells are left untouched.</p>
+
+      <div class="actions">
+        <button id="to-ansi" class="primary">Unicode → Bijoy (ANSI)</button>
+        <button id="to-unicode" class="primary">Bijoy (ANSI) → Unicode</button>
+      </div>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+
+      <section>
+        <h2>Options</h2>
+        <label class="check">
+          <input type="checkbox" id="change-font" />
+          Change the font of converted cells
+        </label>
+        <label class="field">
+          Bijoy font
+          <input type="text" id="ansi-font" spellcheck="false" />
+        </label>
+        <label class="field">
+          Unicode font
+          <input type="text" id="unicode-font" spellcheck="false" />
+        </label>
+        <label class="check">
+          <input type="checkbox" id="only-bijoy-font" />
+          Only convert cells in a Bijoy (…MJ) font when converting to Unicode
+        </label>
+        <p class="hint">
+          Bijoy text is made of English letters, so without this, English cells in the selection would be garbled.
+        </p>
+      </section>
+
+      <section>
+        <h2>Formulas</h2>
+        <p><code>=BANGLA.TOANSI(A1)</code>: Unicode → Bijoy</p>
+        <p><code>=BANGLA.TOUNICODE(A1)</code>: Bijoy → Unicode</p>
+        <p class="hint">Both accept a range (e.g. <code>A1:A100</code>) and spill the results.</p>
+      </section>
+
+      <footer>ABDALGOLABS · ABDNAHID</footer>
+    </main>
+  </body>
+</html>
